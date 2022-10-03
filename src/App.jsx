@@ -138,9 +138,10 @@ function App() {
               question.type === "flag-type" ? "Which country does this flag belong to? " : `${question.capital} is the capital of` 
             }</h3>
 
-            {question && question.allAnswers.map((option,i) => (
+            {question.allAnswers.map((option,i) => (
               <button 
                 className={"quiz_option "} 
+                //change button color while checking and show correct answer
                 style={quizChecking ? 
                   (option === question.correctAnswer ? 
                     {backgroundColor: "green", color: "white"} 
@@ -152,6 +153,18 @@ function App() {
               >
                 <p className="option_marker">{answerOptionMarkers[i]}</p>
                 <p className="option_text">{option}</p>
+                <i className="option_icon">
+                  <span class="material-symbols-outlined">
+                  {/* change icon  while checking depending on answer correctness*/}
+                  {quizChecking ? 
+                  (option === question.correctAnswer ? 
+                    "check_circle"
+                    : option === userAnswer  ? 
+                      "cancel"
+                      : null) 
+                  : null}
+                  </span>
+                </i>
               </button>
             ))}
             {quizChecking && <button className='btn_next' onMouseUp={handleNextClick}>Next</button>}

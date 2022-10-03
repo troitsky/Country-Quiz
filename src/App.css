@@ -68,6 +68,8 @@ body {
 
 .quiz_option:hover {
   border-color: #F9A826;
+  background-color: #F9A826;
+  color: white;
 }
 .option_marker { 
   padding-left: 19px;
@@ -80,6 +82,16 @@ body {
   font-size: 18px;
   line-height: 27px;
   color: inherit;
+}
+
+.option_icon {
+  margin-left: auto;
+  padding-right: 18px;
+  display: flex;
+}
+
+.material-symbols-outlined {
+  font-size: 28px;
 }
 
 .btn_next {
@@ -120,6 +132,12 @@ body {
   color:#6FCF97;
   font-size: 36px;
   line-height: 54px;
+  font-weight: 700;
+}
+
+.max_score_num {
+  font-size: 24px;
+  line-height: 30px;
   font-weight: 700;
 }
 
