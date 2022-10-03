@@ -82,6 +82,7 @@ body {
   font-size: 18px;
   line-height: 27px;
   color: inherit;
+  text-align: left;
 }
 
 .option_icon {
